@@ -1,5 +1,6 @@
 class Solution {
 public:
+    
     vector<vector<int>> kClosest_withPartial_sort(vector<vector<int>>& points, int k) {
         partial_sort(points.begin(),points.begin() + k, points.end(), [](vector<int> &p,vector<int> &q){
             return p[0] * p[0] + p[1] * p[1] < q[0] * q[0] + q[1] * q[1];
